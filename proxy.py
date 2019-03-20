@@ -17,7 +17,6 @@
 ########################################
 
 import socket
-import ssl
 import traceback
 
 from argparse import ArgumentParser
@@ -47,7 +46,7 @@ class ProxyServer():
 		except socket.error:
 			print("[!] Socket address already in use, try again in a few minutes time.")
 			return None
-		sock.listen(64)
+		sock.listen(24)
 		return sock
 
 
@@ -184,7 +183,7 @@ class ProxyServer():
 
 
 def parse_arguments():
-	parser = ArgumentParser(description="Simple HTTP Proxy written in Python.")
+	parser = ArgumentParser(description="Simple HTTP Proxy written in Python. No support for HTTPS connections.")
 	parser.add_argument("-p", "--port", type=int, default=8080, help="The port to listen on. Listens on 8080/tcp by default.")
 	return parser.parse_args()
 
