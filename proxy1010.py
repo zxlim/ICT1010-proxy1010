@@ -2,20 +2,20 @@
 # -*- coding: utf-8 -*-
 
 ########################################
-#	proxy1010.py
+# proxy1010.py
 #
-#	For the partial fulfillment of the module
-#	ICT1010 Computer Networks, ICT Cluster,
-#	Singapore Institute of Technology.
+# For the partial fulfillment of the module
+# ICT1010 Computer Networks, ICT Cluster,
+# Singapore Institute of Technology.
 #
-#	Assignment 2:
-#	Simple HTTP/HTTPS Proxy.
+# Assignment 2:
+# Simple TCP-based HTTP Proxy Server.
 #
-#	Group Members:
-#	Ang Pei Hao			(1802945)
-#	Dominic Keeley Gian	(1802956)
-#	Lim Zhao Xiang		(1802976)
-#	Tan Chin How		(1802987)
+# Group Members:
+#    Ang Pei Hao         (1802945)
+#    Dominic Keeley Gian (1802956)
+#    Lim Zhao Xiang      (1802976)
+#    Tan Chin How        (1802987)
 ########################################
 
 import socket
@@ -66,7 +66,7 @@ def pretty_print(msg, level="info", debug_msg=False):
 
 class HTTPConnection(object):
 	"""
-	HTTP Connection object.
+	HTTPConnection object.
 	"""
 	def __init__(self, conn_type):
 		super(HTTPConnection, self).__init__()
@@ -147,7 +147,7 @@ class HTTPConnection(object):
 
 class HTTPClient(HTTPConnection):
 	"""
-	HTTP Client object.
+	HTTPClient object. Sub-class of HTTPConnection.
 	"""
 	def __init__(self, host, port, sock):
 		super(HTTPClient, self).__init__("client")
@@ -161,7 +161,7 @@ class HTTPClient(HTTPConnection):
 
 class HTTPServer(HTTPConnection):
 	"""
-	HTTP Server object.
+	HTTPServer object. Sub-class of HTTPConnection.
 	"""
 	def __init__(self, host, port, proto):
 		super(HTTPServer, self).__init__("server")
