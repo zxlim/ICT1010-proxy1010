@@ -8,7 +8,7 @@ Basic usage:
 ```bash
 $ python3 proxy1010.py
 ```
-Specify a port to listen on.
+Specify a port to listen on:
 ```bash
 $ python3 proxy1010.py -p 8080
 ```
