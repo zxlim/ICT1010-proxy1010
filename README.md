@@ -5,12 +5,15 @@ The aim of this assignment is to create a connection-oriented multi-threaded TCP
 
 # Usage
 Basic usage:
-```
+```bash
 $ python3 proxy1010.py
 ```
-<br />
-For more details and optional arguments:
+Specify a port to listen on.
+```bash
+$ python3 proxy1010.py -p 8080
 ```
+For more details and optional arguments:
+```bash
 $ python3 proxy1010.py -h
 ```
 
